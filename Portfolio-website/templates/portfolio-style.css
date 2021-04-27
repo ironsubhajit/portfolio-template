@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+
+.top-banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.top-banner::before {
+  content: '';
+  background: url('background/laptop-computer-keyboard-technology.jpg')
+    no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+#bat-brand > img {
+  width: 50px;
+}
+
+nav {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+.navbar-nav > .nav-item > .nav-link {
+  padding-top: 5px;
+  padding-right: 10px;
+  color: white;
+}
+
+.navbar-nav > .nav-item > .nav-link:hover {
+  color: #f5bd8f;
+  /* color: #ffe924; */
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar > .top-nav-menu-items {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+.top-banner > .name > .display-2 {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* big screen size */
+@media only screen and (min-width: 992px) {
+  .top-banner > .name > .display-2 {
+    font-size: 5rem;
+    padding-left: 140px;
+    color: #ffffff;
+    line-height: 98%;
+  }
+}
+
+/* small screen size */
+@media only screen and (max-width: 991px) {
+  .top-banner > .name > .display-2 {
+    font-size: 6rem;
+    color: #f5f5f5;
+    line-height: 98%;
+  }
+}
+
+#profile {
+  text-align: center;
+}
+
+/* Css for projects section */
+
+.project-container {
+  width: 100%;
+  background-color: #f0f0f0;
+  /* background-color: rgb(198, 188, 188); */
+}
+
+.project-container > .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(600px, 300px));
+  grid-gap: 1.5em;
+}
+
+@media only screen and (max-width: 1535px) {
+  .project-container > .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 1.5em;
+  }
+}
+
+.grid-container img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+
+/* hover styles */
+.grid-container > .project-listing {
+  position: relative;
+}
+
+.grid-container > .project-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.project-image > img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.project-listing > .project-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;   
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: rgba(35, 55, 94, 0.5);
+  color: white;
+
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-listing:hover > .project-title {
+  opacity: 1;
+}
+
+.project-listing:hover > .project-image img {
+  filter: blur(1px);
+}
+
+/* footer css */
+
+footer {
+  background-color: #1a1a1a;
+}
+
+.footer > .footer-header {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  font-family: 'monospace';
+  font-size: 2rem;
+  word-spacing: 1rem;
+  letter-spacing: 0.3rem;
+  color: white;
+}
+
+footer > .navigation-links {
+  padding-top: 2.5%;
+  padding-bottom: 0.5%;
+  font-size: 0.55rem;
+}
+
+footer > .social-links {
+  padding-top: 0.5%;
+  padding-bottom: 2.5%;
+  font-size: 0.55rem;
+}
+
+footer > .copyright {
+  font-family: 'monospace';
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1rem;
+  color: white;
+  padding-bottom: 0.5%;
+}
